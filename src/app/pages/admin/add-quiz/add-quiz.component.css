@@ -1,0 +1,30 @@
+.w100 {
+  width: 100%;
+}
+
+.header-image {
+  background-image: url("../../../../assets/add.png");
+  background-size: cover;
+}
+
+.quiz-card {
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 10px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}

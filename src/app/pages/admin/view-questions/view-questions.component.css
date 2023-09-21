@@ -1,0 +1,28 @@
+.mb0 {
+  margin-bottom: 0;
+}
+
+.answer {
+  background-color: #c8e6c9;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.text-right {
+  text-align: end;
+}
+
+.mb50 {
+  margin-bottom: 50px;
+}
+
+.weight300 {
+  font-weight: 500;
+}
+
+.alert {
+  background-color: #ffcdd2;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+}

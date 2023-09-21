@@ -1,0 +1,141 @@
+<mat-card class="mt20 mb20">
+  <mat-card-header>
+    <div mat-card-avatar>
+      <img
+        src="../../../assets/question.png"
+        alt=""
+        style="width: 45px; border-radius: 50%"
+      />
+    </div>
+    <mat-card-title class="mt10">{{ quizName }}</mat-card-title>
+  </mat-card-header>
+
+  <mat-card
+    class="alert m20 text-center"
+    *ngIf="dataLoaded && pagedQuestions.length === 0"
+  >
+    There are currently no questions available for this quiz. <br /><span
+      class="mt10"
+      >Start adding questions?</span
+    >
+  </mat-card>
+
+  <div class="bootstrap-wrapper">
+    <div class="container">
+      <div class="col-12 col-sm-12 text-right mb20">
+        <button
+          mat-flat-button
+          color="primary"
+          [routerLink]="
+            '/admin-dashboard/add-question/' + quizID + '/' + quizName
+          "
+        >
+          Add Question
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <mat-card
+          class="mt5"
+          *ngFor="let question of pagedQuestions; let i = index"
+        >
+          <mat-card-content>
+            <!-- question -->
+            <strong
+              ><p class="mb0">
+                Question {{ paginator.pageIndex * paginator.pageSize + i + 1 }}:
+              </p></strong
+            >
+            <span
+              class="weight300"
+              [innerHTML]="question.questionContent"
+            ></span>
+
+            <!-- options -->
+            <div class="container">
+              <!-- option 1 -->
+              <div class="row" *ngIf="question.option1">
+                <div class="col-12">
+                  <p class="ml15 mt5">
+                    <span class="mr10"><strong>a. </strong></span>
+                    {{ question.option1 }}
+                  </p>
+                </div>
+              </div>
+
+              <!-- option 2 -->
+              <div class="row" *ngIf="question.option2">
+                <div class="col-12">
+                  <p class="ml15 mt5">
+                    <span class="mr10"><strong>b. </strong></span>
+                    {{ question.option2 }}
+                  </p>
+                </div>
+              </div>
+
+              <!-- option 3 -->
+              <div class="row" *ngIf="question.option3">
+                <div class="col-12">
+                  <p class="ml15 mt5">
+                    <span class="mr10"><strong>c. </strong></span>
+                    {{ question.option3 }}
+                  </p>
+                </div>
+              </div>
+
+              <!-- option 4 -->
+              <div class="row" *ngIf="question.option4">
+                <div class="col-12">
+                  <p class="ml15 mt5">
+                    <span class="mr10"><strong>d. </strong></span>
+                    {{ question.option4 }}
+                  </p>
+                </div>
+              </div>
+              <mat-divider></mat-divider>
+              <!-- correct answer -->
+              <div class="row">
+                <div class="col-12">
+                  <p class="mt10 answer">
+                    <span class="pr10"><strong>Correct Answer: </strong></span>
+                    {{ question.answer }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="container text-right">
+              <button
+                mat-mini-fab
+                color="primary"
+                aria-label="Edit"
+                class="m10"
+                [routerLink]="
+                  '/admin-dashboard/question/' + question.questionID
+                "
+              >
+                <mat-icon>edit</mat-icon>
+              </button>
+              <!--  -->
+              <button
+                mat-mini-fab
+                color="warn"
+                aria-label="Delete"
+                class="m10"
+                (click)="deleteQuestion(question.questionID)"
+              >
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</mat-card>
+
+<mat-paginator
+  class="mt20 p10 mb50"
+  [pageSizeOptions]="[5, 10]"
+  [pageSize]="5"
+></mat-paginator>

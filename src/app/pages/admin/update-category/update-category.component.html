@@ -1,0 +1,47 @@
+<mat-card class="mt20">
+  <mat-card-header>
+    <div mat-card-avatar>
+      <img
+        src="../../../assets/add.png"
+        alt=""
+        style="width: 45px; border-radius: 50%"
+      />
+    </div>
+    <mat-card-title class="mt10">Update Category</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="mt20" (ngSubmit)="handleSubmit()">
+      <!-- category Name -->
+      <mat-form-field class="w100" appearance="outline">
+        <mat-label>Category Name</mat-label>
+        <input
+          type="text"
+          name="categoryName"
+          matInput
+          placeholder=""
+          required
+          [(ngModel)]="categoryData.categoryName"
+        />
+      </mat-form-field>
+
+      <!-- category Description -->
+      <mat-form-field class="w100" appearance="outline">
+        <mat-label>Category Description</mat-label>
+        <textarea
+          name="categoryDescription"
+          matInput
+          placeholder=""
+          rows="10"
+          required
+          [(ngModel)]="categoryData.categoryDescription"
+        ></textarea>
+      </mat-form-field>
+
+      <div class="container text-center mt20 mb20">
+        <button type="submit" mat-flat-button color="primary">
+          Update Category
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

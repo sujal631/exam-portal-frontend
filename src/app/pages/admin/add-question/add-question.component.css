@@ -1,0 +1,13 @@
+.w100 {
+  width: 100%;
+}
+
+.option-field {
+  display: flex;
+  align-items: center;
+}
+
+.option-prefix {
+  margin-right: 10px;
+  font-weight: bolder;
+}

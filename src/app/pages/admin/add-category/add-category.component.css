@@ -1,0 +1,19 @@
+.w100 {
+  width: 100%;
+}
+
+.header-image {
+  background-image: url("../../../../assets/add.png");
+  background-size: cover;
+}
+
+.category-card {
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}

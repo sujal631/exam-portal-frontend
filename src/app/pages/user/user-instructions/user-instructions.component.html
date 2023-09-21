@@ -1,0 +1,99 @@
+<mat-card class="instruction-card mt20 mb20">
+  <mat-card-header>
+    <!-- heading -->
+    <div mat-card-avatar class="header-image"></div>
+    <mat-card-title>Quiz Instructions</mat-card-title>
+    <mat-card-subtitle>
+      {{ quizData.category.categoryName }} | {{ quizData.quizName }}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <!-- content -->
+    <p>{{ quizData.quizDescription }}</p>
+    <mat-divider class="divider"></mat-divider>
+
+    <section class="instruction-section">
+      <h3>Important Instructions:</h3>
+      <ul>
+        <li>
+          This quiz consists of
+          <strong>{{ quizData.numberOfQuestions }}</strong> questions.
+        </li>
+        <li>
+          The maximum points you can score in this quiz is
+          <strong>{{ quizData.maxPoints }}</strong
+          >.
+        </li>
+        <li>
+          Each question is worth
+          <strong>{{ quizData.maxPoints / quizData.numberOfQuestions }}</strong>
+          points.
+        </li>
+        <li>
+          The total time allocated for this quiz is
+          <strong>{{ quizData.numberOfQuestions }}</strong> minutes.
+        </li>
+        <li>
+          Each question is designed to take approximately
+          <strong>1 minute to answer</strong>. Manage your time effectively.
+        </li>
+        <li>Read each question carefully before selecting your answer.</li>
+        <li>There is only one correct answer for each question.</li>
+        <li>Ensure a stable internet connection throughout the quiz.</li>
+      </ul>
+    </section>
+
+    <mat-divider class="divider"></mat-divider>
+
+    <section class="instruction-section">
+      <h3>Once the quiz has started:</h3>
+      <ul>
+        <li>You must complete it in one sitting. No pausing and resuming.</li>
+        <li>
+          You <strong>cannot go back to previous questions</strong>. Be
+          confident in your answers.
+        </li>
+        <li>
+          Do not refresh or close the browser during the quiz. It may result in
+          loss of progress.
+        </li>
+        <li>
+          Submit your answers before time runs out. Otherwise, they'll be
+          auto-submitted.
+        </li>
+      </ul>
+    </section>
+
+    <mat-divider class="divider"></mat-divider>
+  </mat-card-content>
+
+  <!-- action buttons -->
+  <mat-card-actions
+    class="action-buttons"
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutAlign="space-between "
+    fxLayoutGap="10px"
+  >
+    <button mat-stroked-button>
+      Total Questions: {{ quizData.numberOfQuestions }}
+    </button>
+    <button mat-stroked-button>Total Points: {{ quizData.maxPoints }}</button>
+    <button mat-stroked-button>
+      Total Time: {{ quizData.numberOfQuestions }} mins
+    </button>
+  </mat-card-actions>
+
+  <mat-divider class="divider"></mat-divider>
+
+  <mat-card-actions class="start-button">
+    <button
+      mat-flat-button
+      color="primary"
+      (click)="confirmStartQuiz(quizData.quizID, quizData.quizName)"
+    >
+      Start Quiz
+    </button>
+  </mat-card-actions>
+</mat-card>

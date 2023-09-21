@@ -1,0 +1,38 @@
+.header-image {
+  background-image: url("../../../../assets/instructions.png");
+  background-size: cover;
+}
+
+.instruction-card {
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+  margin: 1.5rem 0;
+}
+
+.instruction-section {
+  margin-bottom: 1.5rem;
+}
+
+.instruction-section h3 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.instruction-section ul {
+  padding-left: 1.5rem;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.start-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}

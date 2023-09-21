@@ -1,0 +1,95 @@
+.avatar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-image {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.profile-card {
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile_img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #673ab7;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.profile-details-section {
+  padding: 1rem;
+}
+
+.details-card {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.detail-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+}
+
+.detail-item h3,
+.detail-item p {
+  flex: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail-item ul {
+  flex: 2;
+  margin-left: 1rem;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+/* Media Query for larger screens */
+@media (min-width: 577px) {
+  .detail-item h3,
+  .detail-item p,
+  .detail-item ul {
+    flex: initial;
+  }
+
+  .detail-item h3 {
+    flex: 1;
+  }
+
+  .detail-item p,
+  .detail-item ul {
+    flex: 2;
+    margin-left: 1rem;
+  }
+}

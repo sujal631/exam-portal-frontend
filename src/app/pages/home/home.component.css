@@ -1,0 +1,88 @@
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.hero-section {
+  width: 100%;
+  position: relative;
+  color: #fff;
+  height: 100vh;
+  background-image: url("https://images.prismic.io/quizlet-web/1691181593680_Full-BleedImage.jpg?auto=compress,format");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+  max-width: 900px;
+  padding: 20px;
+  align-self: flex-end;
+  padding-bottom: 10%;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  word-spacing: 3px;
+  line-height: 120%;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 130%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    background-position: 60% center; /* Adjust this value as needed */
+  }
+
+  .hero-content {
+    align-self: flex-end;
+    padding-bottom: 25%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .hero-section {
+    background-position: 60% center; /* Adjust this value as needed */
+  }
+
+  .hero-content {
+    align-self: flex-end;
+    padding-bottom: 25%;
+  }
+}

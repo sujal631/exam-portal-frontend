@@ -1,0 +1,66 @@
+.header-image {
+  background-image: url("../../../assets/question.png");
+  background-size: cover;
+}
+
+.quiz-card {
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.options-group {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.header-image-success {
+  background-image: url("../../../assets/success.png");
+  background-size: cover;
+}
+
+.result-container {
+  padding: 20px;
+}
+
+.alert {
+  background-color: #c8e6c9;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+}
+
+.result-card {
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.result-table {
+  margin-top: 1rem;
+}
+
+.result-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.result-table td {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e0e0e0;
+}

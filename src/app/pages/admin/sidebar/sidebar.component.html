@@ -1,0 +1,47 @@
+<mat-card class="mt20">
+  <mat-action-list>
+    <div mat-subheader>Menu</div>
+
+    <button mat-list-item routerLink="/admin-dashboard/profile">
+      <div class="row">
+        <div class="col-2 col-sm-2"><mat-icon>account_circle</mat-icon></div>
+        <div class="col-10 col-sm-10" style="margin-top: 2px !important">
+          Profile
+        </div>
+      </div>
+    </button>
+    <button mat-list-item routerLink="/admin-dashboard/categories">
+      <div class="row">
+        <div class="col-2 col-sm-2"><mat-icon>list</mat-icon></div>
+        <div class="col-10 col-sm-10" style="margin-top: 2px !important">
+          Quiz Categories
+        </div>
+      </div>
+    </button>
+    <button mat-list-item routerLink="/admin-dashboard/add-category">
+      <div class="row">
+        <div class="col-2 col-sm-2"><mat-icon>add_circle</mat-icon></div>
+        <div class="col-10 col-sm-10" style="margin-top: 2px !important">
+          Add Category
+        </div>
+      </div>
+    </button>
+    <button mat-list-item routerLink="/admin-dashboard/add-quiz">
+      <div class="row">
+        <div class="col-2 col-sm-2"><mat-icon>add_circle</mat-icon></div>
+        <div class="col-10 col-sm-10" style="margin-top: 2px !important">
+          Add Quiz
+        </div>
+      </div>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-list-item (click)="logout()">
+      <div class="row">
+        <div class="col-2 col-sm-2"><mat-icon>logout</mat-icon></div>
+        <div class="col-10 col-sm-10" style="margin-top: 2px !important">
+          Log Out
+        </div>
+      </div>
+    </button>
+  </mat-action-list>
+</mat-card>

@@ -1,0 +1,9 @@
+.header-image {
+  background-image: url("../../../../assets/category.png");
+  background-size: cover;
+}
+
+.m0 {
+  font-weight: 500;
+  color: #462088;
+}

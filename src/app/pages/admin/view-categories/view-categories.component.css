@@ -1,0 +1,27 @@
+.header-image {
+  background-image: url("../../../../assets/category.png");
+  background-size: cover;
+}
+
+.m10 {
+  margin: 10px;
+}
+
+.category-list-card {
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-icons {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.ml15 {
+  margin-left: 15px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}

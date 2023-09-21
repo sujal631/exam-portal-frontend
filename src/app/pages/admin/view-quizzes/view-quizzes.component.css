@@ -1,0 +1,19 @@
+.header-image {
+  background-image: url("../../../../assets/quiz.png");
+  background-size: cover;
+}
+
+.ml15 {
+  margin-left: 15px;
+}
+
+.right-aligned {
+  margin-left: auto;
+}
+
+.alert {
+  background-color: #ffcdd2;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+}

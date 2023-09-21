@@ -1,0 +1,83 @@
+<mat-card
+  class="alert mt20 text-center"
+  *ngIf="dataLoaded && pagedQuizzes.length === 0"
+>
+  There are currently no quizzes available for this category. <br /><span
+    class="mt10"
+    >Please add a new quiz!</span
+  >
+</mat-card>
+
+<mat-card class="mt20" *ngFor="let quiz of pagedQuizzes">
+  <mat-card-header>
+    <div mat-card-avatar class="header-image"></div>
+    <mat-card-title>{{ quiz.quizName }}</mat-card-title>
+    <mat-card-subtitle>{{ quiz.category.categoryName }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="ml15 mt10">{{ quiz.quizDescription }}</p>
+  </mat-card-content>
+
+  <mat-card-actions
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutAlign="start "
+    fxLayoutGap="10px"
+  >
+    <button
+      mat-stroked-button
+      color="primary"
+      class="m10"
+      [routerLink]="
+        '/admin-dashboard/view-questions/' + quiz.quizID + '/' + quiz.quizName
+      "
+    >
+      View Questions
+    </button>
+    <button mat-stroked-button class="m10">
+      Max. Points: {{ quiz.maxPoints }}
+    </button>
+    <button mat-stroked-button class="m10">
+      Questions: {{ quiz.numberOfQuestions }}
+    </button>
+
+    <div class="right-aligned mr20">
+      <button
+        mat-mini-fab
+        color="primary"
+        aria-label="Edit"
+        class="m10"
+        [routerLink]="'/admin-dashboard/quiz/' + quiz.quizID"
+      >
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button
+        mat-mini-fab
+        color="warn"
+        aria-label="Delete"
+        class="m10"
+        (click)="deleteQuiz(quiz.quizID)"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card>
+
+<ng-container>
+  <mat-paginator
+    class="mt20 p10"
+    [pageSizeOptions]="[3, 6, 9, 12]"
+    [pageSize]="3"
+  ></mat-paginator>
+</ng-container>
+
+<div class="container text-center mt20 mb20">
+  <button
+    mat-flat-button
+    color="primary"
+    routerLink="/admin-dashboard/add-quiz"
+  >
+    Add Quiz
+  </button>
+</div>
