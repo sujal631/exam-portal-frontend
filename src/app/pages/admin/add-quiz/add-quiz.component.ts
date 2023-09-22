@@ -42,6 +42,7 @@ export class AddQuizComponent {
         this.snack.open('Error fetching categories.', 'OK', {
           duration: 3500,
           politeness: 'polite',
+          panelClass: 'snack-bar-error',
         });
       }
     );
@@ -58,6 +59,7 @@ export class AddQuizComponent {
       this.snack.open('Please fill out all the required fields.', 'OK', {
         duration: 3500,
         politeness: 'polite',
+        panelClass: 'snack-bar-error',
       });
       return;
     }
@@ -69,6 +71,7 @@ export class AddQuizComponent {
       this.snack.open('"Number of Questions" must be a positive number', 'OK', {
         duration: 3500,
         politeness: 'polite',
+        panelClass: 'snack-bar-error',
       });
       return;
     }
@@ -77,6 +80,7 @@ export class AddQuizComponent {
       this.snack.open('"Max Points" must be a positive number', 'OK', {
         duration: 3500,
         politeness: 'polite',
+        panelClass: 'snack-bar-error',
       });
       return;
     }
@@ -93,6 +97,7 @@ export class AddQuizComponent {
         this.snack.open('Quiz added successfully.', 'OK', {
           duration: 3500,
           politeness: 'polite',
+          panelClass: 'snack-bar-error',
         });
       },
       (error) => {
@@ -100,6 +105,7 @@ export class AddQuizComponent {
         this.snack.open('Something went wrong. Please try again.', 'OK', {
           duration: 3500,
           politeness: 'polite',
+          panelClass: 'snack-bar-error',
         });
       }
     );

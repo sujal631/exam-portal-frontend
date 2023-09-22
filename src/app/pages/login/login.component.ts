@@ -32,6 +32,7 @@ export class LoginComponent {
       this.snack.open('Please fill out all the required fields.', 'OK', {
         duration: 3500,
         politeness: 'polite',
+        panelClass: 'snack-bar-error',
       });
       return;
     }

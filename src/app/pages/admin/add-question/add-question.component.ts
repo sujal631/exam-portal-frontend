@@ -54,6 +54,7 @@ export class AddQuestionComponent {
       this.snack.open('Please fill out all the required fields.', 'OK', {
         duration: 3500,
         politeness: 'polite',
+        panelClass: 'snack-bar-error',
       });
       return;
     }
@@ -69,6 +70,7 @@ export class AddQuestionComponent {
         this.snack.open('Question added successfully.', 'OK', {
           duration: 3500,
           politeness: 'polite',
+          panelClass: 'snack-bar-error',
         });
       },
       (error) => {
@@ -76,6 +78,7 @@ export class AddQuestionComponent {
         this.snack.open('Something went wrong. Please try again.', 'OK', {
           duration: 3500,
           politeness: 'polite',
+          panelClass: 'snack-bar-error',
         });
       }
     );

@@ -1,5 +1,5 @@
 <mat-card
-  class="alert mt20 text-center"
+  class="alert mt20 text-center mb20"
   *ngIf="dataLoaded && pagedQuizzes.length === 0"
 >
   There are currently no quizzes available for this category. <br /><span
@@ -8,7 +8,7 @@
   >
 </mat-card>
 
-<mat-card class="mt20" *ngFor="let quiz of pagedQuizzes">
+<mat-card class="mt20 mb20" *ngFor="let quiz of pagedQuizzes">
   <mat-card-header>
     <div mat-card-avatar class="header-image"></div>
     <mat-card-title>{{ quiz.quizName }}</mat-card-title>
@@ -45,7 +45,7 @@
 
 <ng-container>
   <mat-paginator
-    class="mt20 p10"
+    class="mt20 p10 mb50"
     [pageSizeOptions]="[3, 6, 9, 12]"
     [pageSize]="3"
   ></mat-paginator>

@@ -48,6 +48,7 @@ export class UserViewQuizzesComponent {
         this.snack.open('Error fetching questions.', 'OK', {
           duration: 3500,
           politeness: 'polite',
+          panelClass: 'snack-bar-error',
         });
         this.dataLoaded = true;
       }

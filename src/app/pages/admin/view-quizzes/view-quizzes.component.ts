@@ -49,6 +49,7 @@ export class ViewQuizzesComponent {
         this.snack.open('Error fetching questions.', 'OK', {
           duration: 3500,
           politeness: 'polite',
+          panelClass: 'snack-bar-error',
         });
         this.dataLoaded = true;
       }
@@ -89,6 +90,7 @@ export class ViewQuizzesComponent {
             this.snack.open('Quiz deleted successfully.', 'OK', {
               duration: 3500,
               politeness: 'polite',
+              panelClass: 'snack-bar-error',
             });
           },
           (error) => {
@@ -96,6 +98,7 @@ export class ViewQuizzesComponent {
             this.snack.open('Error deleting this quiz.', 'OK', {
               duration: 3500,
               politeness: 'polite',
+              panelClass: 'snack-bar-error',
             });
           }
         );

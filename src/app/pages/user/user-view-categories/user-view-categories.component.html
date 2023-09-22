@@ -1,4 +1,4 @@
-<mat-card class="mt20" *ngFor="let category of pagedCategories">
+<mat-card class="mt20 mb20" *ngFor="let category of pagedCategories">
   <mat-card-header>
     <div mat-card-avatar class="header-image"></div>
     <mat-card-title>{{ category.categoryName }}</mat-card-title>
@@ -31,7 +31,7 @@
 </mat-card>
 
 <mat-paginator
-  class="mt20 p10"
+  class="mt20 p10 mb50"
   [pageSizeOptions]="[3, 6, 9, 12]"
   [pageSize]="3"
 ></mat-paginator>

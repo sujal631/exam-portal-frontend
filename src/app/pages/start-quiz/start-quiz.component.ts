@@ -71,6 +71,7 @@ export class StartQuizComponent {
         this.snack.open('Error loading questions.', 'OK', {
           duration: 3500,
           politeness: 'polite',
+          panelClass: 'snack-bar-error',
         });
       }
     );
@@ -176,6 +177,7 @@ export class StartQuizComponent {
         this.snack.open('Error submitting quiz.', 'OK', {
           duration: 3500,
           politeness: 'polite',
+          panelClass: 'snack-bar-error',
         });
       }
     );

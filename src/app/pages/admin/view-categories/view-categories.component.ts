@@ -77,6 +77,7 @@ export class ViewCategoriesComponent {
             this.snack.open('Category deleted successfully.', 'OK', {
               duration: 3500,
               politeness: 'polite',
+              panelClass: 'snack-bar-error',
             });
           },
           (error) => {
@@ -84,6 +85,7 @@ export class ViewCategoriesComponent {
             this.snack.open('Error deleting this category.', 'OK', {
               duration: 3500,
               politeness: 'polite',
+              panelClass: 'snack-bar-error',
             });
           }
         );

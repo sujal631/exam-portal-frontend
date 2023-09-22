@@ -169,10 +169,13 @@ body {
 }
 
 .snack-bar-error {
-  background-color: red !important;
-  color: white !important;
+  margin-bottom: 60px !important;
 }
 
 .ck-editor__editable_inline {
   min-height: 100px;
+}
+
+.mb50 {
+  margin-bottom: 70px;
 }

@@ -52,6 +52,7 @@ export class UserInstructionsComponent {
         this.snack.open('Error starting this quiz.', 'OK', {
           duration: 3500,
           politeness: 'polite',
+          panelClass: 'snack-bar-error',
         });
       }
     );

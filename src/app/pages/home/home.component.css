@@ -33,7 +33,7 @@
   max-width: 900px;
   padding: 20px;
   align-self: flex-end;
-  padding-bottom: 10%;
+  padding-bottom: 12%;
 }
 
 .hero-content h1 {
@@ -83,6 +83,6 @@
 
   .hero-content {
     align-self: flex-end;
-    padding-bottom: 25%;
+    padding-bottom: 35%;
   }
 }
