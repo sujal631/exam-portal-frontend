@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <mat-card class="box-shadow pl10 pr10 pt20 pb20 mt20 mb20">
+        <mat-card class="box-shadow pl10 pr10 pt20 pb20 mt20 mb50">
           <div class="container text-center mb20">
             <img
               src="../../../assets/register.png"
@@ -11,6 +11,19 @@
             />
           </div>
           <h1 class="h1 text-center">Register</h1>
+          <!-- Disclaimer -->
+          <div class="mt20">
+            <small>
+              <strong>Disclaimer:</strong> This is a sample project for
+              demonstration purposes only.
+              <span style="color: red"
+                >Please do not enter any real or personal information.</span
+              >
+              No real data is collected, stored, or processed. By registering,
+              you acknowledge that this is a mock platform and any data entered
+              should be fictional.
+            </small>
+          </div>
           <!-- Register Form -->
           <form (ngSubmit)="handleSubmit()" class="mt20">
             <!-- firstName -->
